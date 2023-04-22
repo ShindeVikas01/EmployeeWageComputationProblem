@@ -20,7 +20,6 @@ public class EmployeeWageComputation {
 		final int WAGE_PER_HOUR=20;
 		final int FULL_TIME_HOUR=8;
 		final int PART_TIME_HOUR=4;
-		final int IS_FULL_TIME=1;
 		
 		System.out.println("Welcome to Employee Wage Computation");
 		
@@ -36,13 +35,16 @@ public class EmployeeWageComputation {
 		if(empAttendance==IS_PRESENT){
 			System.out.println("Employee is Present");
 			empType=random.nextInt(2);
-			if(empType==IS_FULL_TIME){
-				System.out.println("Emplyee is Full time");
-				empWage=WAGE_PER_HOUR*FULL_TIME_HOUR;
-				System.out.println("Employee Wage="+empWage);
-			}else{
+			switch(empType){
+			case 0:
 				System.out.println("Employee is Part time");
 				empWage=WAGE_PER_HOUR*PART_TIME_HOUR;
+				System.out.println("Employee Wage="+empWage);
+				break;
+				
+			case 1:
+				System.out.println("Employee is Full time");
+				empWage=WAGE_PER_HOUR*FULL_TIME_HOUR;
 				System.out.println("Employee Wage="+empWage);
 			}
 		}else{
