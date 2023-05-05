@@ -51,7 +51,7 @@ public class EmployeeWageComputation {
 		System.out.println("Monthly Total Days= "+total_working_days);
 		System.out.println("Total Working Hours= "+total_working_hours);
 		System.out.println("------------------------------");
-		while(total_days != total_working_days && total_hours < total_working_hours) {
+		while(total_days != total_working_days && total_hours < total_working_days) {
 			System.out.println("Day = "+total_days+"   Total Hr="+total_hours);
 			empWage=0;
 			empAttendance=random.nextInt(2);
@@ -90,7 +90,7 @@ public class EmployeeWageComputation {
 		//ewc is object of EmployeeWageComputation class
 		EmployeeWageComputation ewc=new EmployeeWageComputation();
 		System.out.println("Welcome to Employee Wage Computation");
-		ewc.employeeWage("TCS",20,100,30);
+		ewc.employeeWage("TCS",20,10,30);
 	}
 
 }
